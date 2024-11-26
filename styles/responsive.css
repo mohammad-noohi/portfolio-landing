@@ -1,0 +1,49 @@
+@media screen and ( max-width:1400px){
+  
+}
+
+@media screen and ( max-width:1200px){
+
+}
+
+@media screen and ( max-width: 992px){
+ .logo h1{
+  font-size: 5rem;
+ }
+
+ .menu{
+  gap: 2rem;
+ }
+}
+
+@media screen and (max-width:768px){
+  .menu{
+    position: absolute;
+    background-color: var(--section-bg-color);
+    /* border: 1px solid red; */
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    transition: all 200ms ease-in;
+    height: 0;
+    overflow: hidden;
+    z-index: 11;
+  }
+  
+  .menu--open{
+    padding: 2rem 0;
+    height: auto;
+  }
+
+  
+
+  .bars{
+    display: flex;
+  }
+}
+
+@media screen and ( max-width:576px){
+  
+}
