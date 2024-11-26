@@ -1,0 +1,40 @@
+/*------------------ Poppinse Fonts ------------------*/
+/* Regular */
+@font-face {
+  font-family: "Poppinse Regular";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Poppinse Medium";
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Semibold */
+@font-face {
+  font-family: "Poppinse Semibold";
+  src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Poppinse Bold";
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Black */
+@font-face {
+  font-family: "Poppinse Black";
+  src: url("../fonts/Poppins-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
