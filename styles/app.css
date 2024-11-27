@@ -30,6 +30,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   color: var(--text-color);
+  background-color: var(--app-bg-color);
+  margin-top: 12rem; /* equal to header's height */
 }
 
 ul {
@@ -44,10 +46,54 @@ a {
   color: inherit;
 }
 
+/*---------------------- Helper Classes ----------------------*/
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.container {
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+}
+
+/*------------------------ components ------------------------*/
+.app-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 6rem;
+  border-radius: 4rem;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Poppinse Semibold";
+}
+
+.app-btn--primary {
+  background-color: var(--primary-color);
+  box-shadow: 0 1.6rem 2.9rem 0 rgba(11, 190, 173, 0.41);
+}
+
+.app-btn--secondary {
+  background-color: var(--secondary-color);
+  box-shadow: 0 1.6rem 2.9rem 0 rgba(245, 127, 23, 0.24);
+}
+
 /*------------------------ Header ------------------------*/
 
 .header {
-  position: relative; /* for use z-index */
+  position: fixed;
+  top: 0;
+  width: 100%;
   box-shadow: 0 0.3rem 5.9rem 0 rgba(4, 195, 255, 0.16);
   background-color: var(--section-bg-color);
   z-index: 11;
@@ -58,6 +104,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 0;
+  transition: all 200ms ease;
 }
 
 .logo {
@@ -145,6 +192,7 @@ a {
   transform: translateY(1.2rem) rotate(-45deg);
 }
 
+/* Overlay */
 .overlay {
   opacity: 0;
   visibility: hidden;
@@ -155,9 +203,71 @@ a {
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 10;
   transition: all 200ms ease-in;
+  backdrop-filter: blur(4px);
 }
 
 .overlay.overlay--active {
   opacity: 1;
   visibility: visible;
+}
+
+/*----------------------------- Main -----------------------------*/
+.main {
+}
+
+/*-------- Hero Section --------*/
+
+.hero {
+  padding: 8rem 0 30rem 0;
+  background-image: url("../media/shapes/header-shape.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.hero__content {
+}
+
+.hero__mini-title {
+  font-family: "Poppinse Semibold";
+  font-size: 2.8rem;
+  text-transform: capitalize;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.hero__title {
+  font-family: "Poppinse Bold";
+  font-size: 5rem;
+  text-transform: capitalize;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.hero__mini-title .username {
+  color: var(--secondary-color);
+}
+
+.hero__caption {
+  margin: 0;
+  opacity: 70%;
+}
+
+.hero__links-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.hero__img {
+  max-width: 55rem;
+  height: 55rem;
+  border: 2rem solid var(--section-bg-color);
+  background-image: url("../media/pictures/header-avatar.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 5.9rem 0 rgba(96, 233, 255, 27%);
 }

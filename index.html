@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <!-- faveicon -->
-    <link rel="icon" type="image/x-icon" href="media/pictures/WA..png">
+    <link rel="icon" type="image/x-icon" href="media/pictures/WA..png" />
     <!-- app.js -->
     <link rel="stylesheet" href="styles/app.css" />
     <!-- responsive.css -->
     <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header header--scrolled">
       <div class="container">
         <nav class="nav">
           <!-- logo -->
@@ -37,9 +37,31 @@
       </div>
     </header>
 
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="row align-items-center justify-content-between wrap-reverse">
+            <div class="col-12 col-lg-6 col-xl-7">
+              <div class="hero__content">
+                <h3 class="hero__mini-title">Hello, IM <span class="username">White Alexa</span></h3>
+                <h2 class="hero__title">Creative Designer</h2>
+                <p class="hero__caption">Freelancer Web/ Mobile UI/UX Designer with Motion Graphics</p>
+                <div class="hero__links-wrapper">
+                  <a href="#" class="hero__link app-btn app-btn--primary">hire me</a>
+                  <a href="#" class="hero__link app-btn app-btn--secondary">get resume</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-5">
+              <div class="hero__img"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Overlay -->
-     <div class="overlay"></div>
+    <div class="overlay"></div>
     <!-- app.js -->
     <script src="scripts/app.js"></script>
   </body>
