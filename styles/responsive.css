@@ -2,6 +2,10 @@
   .hero__img {
     height: 45rem;
   }
+
+  .hero {
+    background-size: unset;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -53,9 +57,30 @@
   .hero__links-wrapper {
     justify-content: center;
   }
+
+  /* About Section */
+  .about__wrapper {
+    flex-direction: column;
+  }
+
+  .about__img-wrapper {
+    width: 100%;
+  }
+
+  .about__content {
+    width: 100%;
+    padding: 2.4rem 2.4rem 5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .about__links-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .about__links-wrapper a {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 576px) {

@@ -65,6 +65,11 @@ a {
   border-right: 1px solid red;
 }
 
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
 /*------------------------ components ------------------------*/
 .app-btn {
   display: flex;
@@ -86,6 +91,46 @@ a {
 .app-btn--secondary {
   background-color: var(--secondary-color);
   box-shadow: 0 1.6rem 2.9rem 0 rgba(245, 127, 23, 0.24);
+}
+
+.section-title {
+  font-family: "Poppinse Bold";
+  font-size: 4.8rem;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  margin: 0;
+  text-align: center;
+}
+
+.section-subtitle {
+  margin: 0;
+  text-transform: capitalize;
+  margin: 0.8rem 0 2.8rem 0;
+  text-align: center;
+  letter-spacing: 0.25rem;
+}
+
+.section-line {
+  width: 24rem;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 3rem;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 7rem;
+}
+
+.section-line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4rem;
+  height: 1rem;
+  border-radius: 5rem;
+  background-color: var(--primary-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*------------------------ Header ------------------------*/
@@ -222,6 +267,7 @@ a {
   background-image: url("../media/shapes/header-shape.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: contain;
 }
 
 .hero__content {
@@ -270,4 +316,78 @@ a {
   background-size: cover;
   border-radius: 50%;
   box-shadow: 0 0 5.9rem 0 rgba(96, 233, 255, 27%);
+}
+
+/*------------- About Us Section -------------*/
+
+.about {
+  padding: 10rem 0;
+}
+
+.about__wrapper {
+  display: flex;
+  box-shadow: 0 0 5.9rem rgba(96, 233, 255, 27%);
+  background-color: var(--section-bg-color);
+}
+
+.about__img-wrapper {
+  width: 48%;
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__content {
+  width: 52%;
+  padding: 4rem 3rem 6rem 3rem;
+}
+
+.about__title {
+  font-family: "Poppinse Semibold";
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.about__caption {
+  margin-bottom: 0;
+}
+
+.about__mini-title {
+  font-family: "Poppinse Semibold";
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-top: 7rem;
+}
+
+.about__list {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-left: 1rem;
+}
+
+.about__list-item {
+  /* padding-left: 2.4rem; */
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.about__list-item::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+}
+
+.about__links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
