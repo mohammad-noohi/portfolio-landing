@@ -82,6 +82,48 @@
   .service-card {
     padding: 5rem;
   }
+
+  /* Resume Section */
+  .resume__container {
+    flex-direction: column;
+  }
+
+  .resume__list {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .resume__list::before {
+    display: none;
+  }
+
+  .resume__list-item {
+    background-color: #eee;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    padding: 0.4rem 1.6rem;
+    /* flex-grow: 1; */
+  }
+
+  .resume__list-item.resume__list-item--active {
+    background-color: var(--primary-color);
+  }
+
+  .resume__list-item svg {
+    display: none;
+  }
+
+  .resume__list-item::before {
+    display: none;
+  }
+
+  .tabs {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -124,7 +166,16 @@
 
 @media screen and (max-width: 400px) {
   /* Service Section */
-  .service-card__title{
+  .service-card__title {
     font-size: 2.2rem;
+  }
+
+  /* Resume Section */
+  .tab__item-title{
+    font-size: 1.8rem;
+  }
+
+  .tab__item-badge{
+    font-size: 1.2rem;
   }
 }

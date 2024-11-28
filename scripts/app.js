@@ -7,6 +7,9 @@ const menu = document.querySelector(".menu");
 const overlay = document.querySelector(".overlay");
 // select all sections to use for scrollspy feature
 const sections = document.querySelectorAll("section");
+// Tabs
+const resumeListItems = document.querySelectorAll(".resume__list-item");
+const tabElems = document.querySelectorAll(".tab");
 
 /*-------------- Open-Close mobile menu --------------*/
 hamburgerToggle.addEventListener("click", function (e) {
@@ -70,4 +73,20 @@ let sectionObserver = new IntersectionObserver(
 // observe all section with observer object
 sections.forEach(sectionElem => {
   sectionObserver.observe(sectionElem);
+});
+
+// Tabs Feature in Resume Section
+resumeListItems.forEach(resumeListItem => {
+  resumeListItem.addEventListener("click", function () {
+    // diactive previous item
+    document.querySelector(".resume__list-item--active").classList.remove("resume__list-item--active");
+    // active new item
+    this.classList.add("resume__list-item--active");
+
+    const tabTargeElem = document.querySelector(`.tab#${resumeListItem.dataset.tabTarget}`);
+    // hide previous tab
+    document.querySelector(".tab--active").classList.remove("tab--active");
+    // show new tab
+    tabTargeElem.classList.add("tab--active");
+  });
 });
