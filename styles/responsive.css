@@ -1,4 +1,5 @@
 @media screen and (max-width: 1400px) {
+  /* Hero Section */
   .hero__img {
     height: 45rem;
   }
@@ -6,15 +7,22 @@
   .hero {
     background-size: unset;
   }
+
+  /* Services Section */
+  .service-card {
+    padding: 6rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  /* Hero Section */
   .hero__title {
     font-size: 4.4rem;
   }
 }
 
 @media screen and (max-width: 992px) {
+  /* Header */
   .logo h1 {
     font-size: 5rem;
   }
@@ -22,7 +30,6 @@
   .menu {
     position: absolute;
     background-color: var(--section-bg-color);
-    /* border: 1px solid red; */
     top: 100%;
     left: 0;
     right: 0;
@@ -44,7 +51,6 @@
   }
 
   /* Hero Section */
-
   .hero {
     text-align: center;
   }
@@ -71,9 +77,15 @@
     width: 100%;
     padding: 2.4rem 2.4rem 5rem;
   }
+
+  /* Services Section */
+  .service-card {
+    padding: 5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  /* About Section */
   .about__links-wrapper {
     flex-wrap: wrap;
   }
@@ -84,6 +96,7 @@
 }
 
 @media screen and (max-width: 576px) {
+  /* Hero Section */
   .hero__mini-title {
     font-size: 2rem;
   }
@@ -98,6 +111,7 @@
 }
 
 @media screen and (max-width: 500px) {
+  /* Hero Section */
   .hero__img {
     max-width: 32rem;
     height: 32rem;
@@ -109,4 +123,8 @@
 }
 
 @media screen and (max-width: 400px) {
+  /* Service Section */
+  .service-card__title{
+    font-size: 2.2rem;
+  }
 }
