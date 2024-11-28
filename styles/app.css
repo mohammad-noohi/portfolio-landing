@@ -177,8 +177,7 @@ a {
   transition: color 200ms ease;
 }
 
-.menu__link:hover,
-.menu__link:active {
+.menu__link:hover {
   color: var(--primary-color);
 }
 
@@ -268,7 +267,7 @@ a {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
-  margin-bottom: 10rem;
+  scroll-margin-top: 10rem;
 }
 
 .hero__content {
@@ -322,7 +321,9 @@ a {
 /*------------- About Us Section -------------*/
 
 .about {
-  margin-bottom: 10rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  scroll-margin-top: 10rem; /* we can use this instead of large padding */
 }
 
 .about__wrapper {
@@ -395,7 +396,9 @@ a {
 
 /* Services Section */
 .services {
-  margin-bottom: 10rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  scroll-margin-top: 10rem;
 }
 
 .service-card {
