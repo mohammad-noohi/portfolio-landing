@@ -95,6 +95,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
+    background-color: transparent;
   }
 
   .resume__list::before {
@@ -171,11 +172,11 @@
   }
 
   /* Resume Section */
-  .tab__item-title{
+  .tab__item-title {
     font-size: 1.8rem;
   }
 
-  .tab__item-badge{
+  .tab__item-badge {
     font-size: 1.2rem;
   }
 }
