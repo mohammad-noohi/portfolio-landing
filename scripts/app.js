@@ -90,3 +90,66 @@ resumeListItems.forEach(resumeListItem => {
     tabTargeElem.classList.add("tab--active");
   });
 });
+
+/*--------------------- Swiper Sliders Configurations ---------------------*/
+
+const swiper = new Swiper(".swiper", {
+  // Basic Config
+  slidesPerView: 1,
+  spaceBetween: 10,
+
+  // pagination config
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    // dynamicBullets : true, // I use this later
+  },
+
+  // responsive
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  },
+});
+
+// Sliders Tabs list
+const sliderItems = document.querySelectorAll(".portfolio-list__item");
+
+sliderItems.forEach(sliderItem => {
+  sliderItem.addEventListener("click", e => {
+    // diactive previous slider item button
+    const previousSliderItem = document.querySelector(".portfolio-list__item--active").classList.remove("portfolio-list__item--active");
+
+    // active current slider item button
+    sliderItem.classList.add("portfolio-list__item--active");
+
+    const sliderId = sliderItem.getAttribute("data-slider-id");
+
+    const portfolioContentElem = document.querySelector(sliderId);
+
+    // hide previous slider
+    document.querySelector(".portfolio__content--active").classList.remove("portfolio__content--active");
+
+    // show related slider
+    portfolioContentElem.classList.add("portfolio__content--active");
+  });
+});
+
+
+// portfolio list slider
+const portfolioListSlider = new Swiper('.portfolio__list-slider',{
+  slidesPerView : '5',
+  spaceBetween : 30,
+})

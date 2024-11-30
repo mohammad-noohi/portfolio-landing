@@ -125,6 +125,13 @@
   .tabs {
     width: 100%;
   }
+
+  /* Portfolio Section */
+  .portfolio-list__item {
+    /* font-size: 1.4rem; */
+    width: 12rem;
+    height: 4rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -135,6 +142,12 @@
 
   .about__links-wrapper a {
     width: 100%;
+  }
+
+  /* Portfolio Section */
+  .portfolio-list__item {
+    font-size: 1.4rem;
+    flex-grow: 1;
   }
 }
 

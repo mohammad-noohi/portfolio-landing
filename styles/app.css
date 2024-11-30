@@ -515,6 +515,7 @@ a {
   box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
   transform: skewY(-5deg);
   margin-top: 20rem;
+  /* margin-bottom: 20rem; */
 }
 
 .resume__container {
@@ -708,4 +709,82 @@ a {
 
 .tab__contetn-text {
   margin: 0;
+}
+
+/* portfolio Section */
+.portfolio {
+  padding: 10rem 0;
+  margin-top: 20rem;
+  scroll-margin-top: 10rem;
+}
+
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4.4rem;
+  gap: 1rem;
+}
+
+.portfolio-list__item {
+  border-radius: 4rem;
+  width: 15.7rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.portfolio-list__item--active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Portfolio__content */
+.portfolio__content {
+  opacity: 0;
+  visibility: 0;
+  height: 0;
+  transition: all 300ms linear;
+}
+
+.portfolio__content--active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-pagination-bullet {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 4px solid #bfbebe;
+  background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  border-color: var(--primary-color);
+}
+
+.slider-img {
+  width: 100%;
+}
+
+/* 
+NOTE : if we need pagaintion not over on slider and be under the slider with some space between slider and pagination we must set position : static; to pagination
+
+pagination , navigation buttons has position absolute so be carefull
+
+*/
+
+.swiper-pagination {
+  position: static;
+  margin-top: 1.7rem;
 }
