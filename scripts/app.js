@@ -147,9 +147,8 @@ sliderItems.forEach(sliderItem => {
   });
 });
 
-
 // portfolio list slider
-const portfolioListSlider = new Swiper('.portfolio__list-slider',{
-  slidesPerView : '5',
-  spaceBetween : 30,
-})
+const portfolioListSlider = new Swiper(".portfolio__list-slider", {
+  slidesPerView: "5",
+  spaceBetween: 30,
+});

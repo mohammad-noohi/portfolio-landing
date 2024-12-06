@@ -747,7 +747,7 @@ a {
 /* Portfolio__content */
 .portfolio__content {
   opacity: 0;
-  visibility: 0;
+  visibility: hidden;
   height: 0;
   transition: all 300ms linear;
 }
@@ -756,10 +756,15 @@ a {
   opacity: 1;
   visibility: visible;
   height: auto;
+  /* height: 40rem; */ /* if we write this code we see an animation for reveal slider */
 }
 
 .swiper {
   height: 100%;
+}
+
+.swiper-slide {
+  height: unset; /* fix slider image height */
 }
 
 .swiper-pagination-bullet {
@@ -775,6 +780,7 @@ a {
 
 .slider-img {
   width: 100%;
+  height: 100%; /* fix slider image height */
 }
 
 /* 
