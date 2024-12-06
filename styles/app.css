@@ -74,6 +74,18 @@ a {
   transform: skewY(5deg);
 }
 
+.bg-orange {
+  background-color: #ff6331;
+}
+
+.bg-purple {
+  background-color: rgb(128, 58, 251);
+}
+
+.bg-pink {
+  background-color: rgb(245, 39, 108);
+}
+
 /*------------------------ components ------------------------*/
 .app-btn {
   display: flex;
@@ -95,6 +107,21 @@ a {
 .app-btn--secondary {
   background-color: var(--secondary-color);
   box-shadow: 0 1.6rem 2.9rem 0 rgba(245, 127, 23, 0.24);
+}
+
+.app-btn--orange {
+  background-color: rgb(255, 99, 49);
+  box-shadow: 0 1.6rem 2.9rem 0 rgba(255, 99, 49, 0.24);
+}
+
+.app-btn--purple {
+  background-color: rgb(128, 58, 251);
+  box-shadow: 0 1.6rem 2.9rem 0 rgba(128, 58, 251, 0.24);
+}
+
+.app-btn--pink {
+  background-color: rgb(245, 39, 108);
+  box-shadow: 0 1.6rem 2.9rem 0 rgba(245, 39, 108, 0.24);
 }
 
 .section-title {
@@ -515,7 +542,6 @@ a {
   box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
   transform: skewY(-5deg);
   margin-top: 20rem;
-  /* margin-bottom: 20rem; */
 }
 
 .resume__container {
@@ -793,4 +819,65 @@ pagination , navigation buttons has position absolute so be carefull
 .swiper-pagination {
   position: static;
   margin-top: 1.7rem;
+}
+
+/*----------------- Pricing Section -----------------*/
+.pricing {
+  padding-top: 9rem;
+  padding-bottom: 15rem;
+  scroll-margin-top: 10rem;
+  box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
+  transform: skewY(-5deg);
+  margin-top: 20rem;
+}
+
+.package {
+  box-shadow: 0 0 6rem 0 rgba(96, 233, 255, 0.27);
+}
+
+.package__header {
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.package__title {
+  font-size: 3.6rem;
+  font-family: "Poppinse Semibold";
+  margin: 0;
+}
+
+.package__price {
+  display: inline-block;
+  font-family: "Poppinse Semibold";
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.package__filter {
+  margin: 0;
+}
+
+.package__body {
+  background-color: var(--app-bg-color);
+  padding: 4rem 0 4.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pakage__options {
+  margin-bottom: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.package__options-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.package__link {
 }
