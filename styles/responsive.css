@@ -132,6 +132,15 @@
     width: 12rem;
     height: 4rem;
   }
+
+  /* Contactus Section */
+  .contactus__map {
+    display: none;
+  }
+
+  .contact {
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {

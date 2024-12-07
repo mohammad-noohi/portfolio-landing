@@ -881,3 +881,86 @@ pagination , navigation buttons has position absolute so be carefull
 
 .package__link {
 }
+
+/* Contact Us Section */
+.contactus {
+  padding-top: 9rem;
+}
+
+.contactus__wrapper {
+  background-image: url("../media/pictures/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 6rem 0;
+}
+
+.contactus__map {
+  background-color: var(--app-bg-color);
+  width: 4.5rem;
+  height: 4.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  box-shadow: 0 0 5.9rem 0 rgba(96, 233, 255, 0.27), 0 0 0 15px var(--app-bg-color), 0 0 5.9rem 0 rgba(96, 233, 255, 0.27);
+  position: absolute;
+  top: 42%;
+  left: 18%;
+}
+
+.contactus__map-icon {
+  position: absolute;
+}
+
+.contact {
+  background-color: var(--section-bg-color);
+  box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
+  max-width: 57rem;
+  padding: 5rem;
+  margin-left: auto;
+}
+
+.contact__title {
+  font-family: "Poppinse Bold";
+  font-size: 3.6rem;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  margin: 0 0 2.4rem 0;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__input {
+  padding: 2rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5.9rem 0 rgba(98, 233, 255, 0.27);
+  background-color: var(--app-bg-color);
+  border-radius: 1rem;
+  color: var(--text-color);
+}
+
+.contact__input::placeholder {
+  text-transform: capitalize;
+  color: var(--text-color);
+  font-size: 1.6rem;
+}
+
+.contact__input--texterea {
+  min-height: 8rem;
+  max-height: 18rem;
+  resize: vertical;
+}
+
+.contact__btn {
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
