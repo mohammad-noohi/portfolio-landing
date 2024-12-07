@@ -173,6 +173,15 @@
   .hero__links-wrapper {
     gap: 1.6rem;
   }
+
+  /* Footer */
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer__socials {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 500px) {

@@ -964,3 +964,47 @@ pagination , navigation buttons has position absolute so be carefull
   width: 100%;
   cursor: pointer;
 }
+
+/* Footer */
+.footer {
+  padding: 2.6rem 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__text {
+  font-family: "Poppinse Semibold";
+  letter-spacing: 0.25rem;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer__social {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: var(--text-color);
+  color: var(--app-bg-color);
+  transition: all 200ms ease;
+}
+
+.footer__social:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 5.9rem 0 rgba(96, 233, 255, 0.27);
+}
+
+.footer__social-icon {
+  width: 3rem;
+  height: 3rem;
+}
