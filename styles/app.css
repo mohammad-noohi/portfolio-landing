@@ -200,6 +200,11 @@ a {
 }
 
 .menu__item {
+  cursor: pointer;
+}
+
+.menu__item--active  {
+  color: var(--primary-color);
 }
 
 .menu__link {
@@ -212,9 +217,6 @@ a {
   color: var(--primary-color);
 }
 
-.menu__link--active {
-  color: var(--primary-color);
-}
 
 .bars {
   display: none;
@@ -294,11 +296,11 @@ a {
 
 .hero {
   padding: 8rem 0 30rem 0;
+  /* scroll-margin-top: 10rem; */
   background-image: url("../media/shapes/header-shape.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
-  scroll-margin-top: 10rem;
 }
 
 .hero__content {
@@ -352,9 +354,10 @@ a {
 /*------------- About Us Section -------------*/
 
 .about {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
-  scroll-margin-top: 10rem; /* we can use this instead of large padding */
+  /* padding-top: 4.5rem;
+  padding-bottom: 4.5rem; */
+  margin-top: 8rem;
+  /* scroll-margin-top: 10rem; */ /* we can use this instead of large padding */
 }
 
 .about__wrapper {
@@ -427,9 +430,10 @@ a {
 
 /* Services Section */
 .services {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
-  scroll-margin-top: 10rem;
+  /* padding-top: 4.5rem;
+  padding-bottom: 4.5rem; */
+  margin-top: 8rem;
+  /* scroll-margin-top: 10rem; */
 }
 
 .service-card {
@@ -538,10 +542,10 @@ a {
 .resume {
   padding-top: 9rem;
   padding-bottom: 9rem;
-  scroll-margin-top: 10rem;
+  margin-top: 8rem;
+  /* scroll-margin-top: 10rem; */
   box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
   transform: skewY(-5deg);
-  margin-top: 20rem;
 }
 
 .resume__container {
@@ -739,9 +743,8 @@ a {
 
 /* portfolio Section */
 .portfolio {
-  padding: 10rem 0;
-  margin-top: 20rem;
-  scroll-margin-top: 10rem;
+  margin-top: 8rem;
+  /* scroll-margin-top: 10rem; */
 }
 
 .portfolio-list {
@@ -824,11 +827,11 @@ pagination , navigation buttons has position absolute so be carefull
 /*----------------- Pricing Section -----------------*/
 .pricing {
   padding-top: 9rem;
+  margin-top: 8rem;
   padding-bottom: 15rem;
-  scroll-margin-top: 10rem;
+  /* scroll-margin-top: 10rem; */
   box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
   transform: skewY(-5deg);
-  margin-top: 20rem;
 }
 
 .package {
@@ -884,7 +887,7 @@ pagination , navigation buttons has position absolute so be carefull
 
 /* Contact Us Section */
 .contactus {
-  padding-top: 9rem;
+  padding-top: 8rem;
 }
 
 .contactus__wrapper {

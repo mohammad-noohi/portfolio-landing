@@ -1,81 +1,58 @@
 "use strict";
 
-/* Elements */
-const headerMenu = document.querySelector(".header .menu");
+/*----------------------- Elements -----------------------*/
 const hamburgerToggle = document.querySelector(".bars");
 const menu = document.querySelector(".menu");
 const overlay = document.querySelector(".overlay");
-// select all sections to use for scrollspy feature
 const sections = document.querySelectorAll("section");
-// Tabs
 const resumeListItems = document.querySelectorAll(".resume__list-item");
 const tabElems = document.querySelectorAll(".tab");
+const menuItems = document.querySelectorAll(".menu__item");
+const sliderItems = document.querySelectorAll(".portfolio-list__item");
 
-/*-------------- Open-Close mobile menu --------------*/
+/*-------------- باز و بسته شدن منو موبایل --------------*/
 hamburgerToggle.addEventListener("click", function (e) {
   hamburgerToggle.classList.toggle("bars--open");
   menu.classList.toggle("menu--open");
   overlay.classList.toggle("overlay--active");
 });
 
-/*-------- Close mobile menu when click on overlay --------*/
+// بسته شدن منو موبایل با کلیک خارج از منو
 overlay.addEventListener("click", e => {
   hamburgerToggle.classList.remove("bars--open");
   menu.classList.remove("menu--open");
   overlay.classList.remove("overlay--active");
 });
 
-/*-------------- Scroll to Section --------------*/
-headerMenu.addEventListener("click", function (e) {
-  const menuLink = e.target.closest(".menu__link");
+/*------------------- اسکرول به سکشن مورد نظر -------------------*/
+menuItems.forEach(menuItem => {
+  menuItem.addEventListener("click", e => {
+    e.preventDefault();
 
-  if (menuLink) {
-    e.preventDefault(); // dont' scroll by default html , csss behavior
+    // diactive previous item
+    document.querySelector(".menu__item--active").classList.remove("menu__item--active");
 
-    const targetId = menuLink.getAttribute("href");
+    // active new item
+    menuItem.classList.add("menu__item--active");
 
-    const target = document.querySelector(`${targetId}`);
+    const sectionClass = menuItem.getAttribute("data-section");
+    const sectionElem = document.querySelector(`.${sectionClass}`);
+    const sectionOffsetTop = sectionElem.offsetTop;
 
-    target.scrollIntoView({
+    /* 
+    because we use sticky header so we should subtraction the height of header from offsettop value of section for scrolling
+    */
+
+    const headerHeight = document.querySelector(".header").offsetHeight;
+
+    window.scrollTo({
+      top: sectionOffsetTop - headerHeight,
       behavior: "smooth",
-      inline: "start",
-      block: "start",
     });
-
-    // remove active link and set new one
-    const prevActiveLink = headerMenu.querySelector(".menu__link.menu__link--active");
-    prevActiveLink.classList.remove("menu__link--active");
-    menuLink.classList.add("menu__link--active");
-  }
+  });
 });
 
-/*-------------------- Scrollspy Feature --------------------*/
-let sectionObserver = new IntersectionObserver(
-  function (entries, observer) {
-    entries.forEach(sectionElem => {
-      if (sectionElem.isIntersecting) {
-        // diactive previous link
-        document.querySelector(".header .menu .menu__link.menu__link--active").classList.remove("menu__link--active");
-
-        // active new link
-        document.querySelector(`.header .menu .menu__link[href="#${sectionElem.target.id}"]`).classList.add("menu__link--active");
-      }
-    });
-  },
-  {
-    // define configuration of observer
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.8,
-  }
-);
-
-// observe all section with observer object
-sections.forEach(sectionElem => {
-  sectionObserver.observe(sectionElem);
-});
-
-// Tabs Feature in Resume Section
+/*-------------- عملکرد تب های توی سکشن روزمه --------------*/
 resumeListItems.forEach(resumeListItem => {
   resumeListItem.addEventListener("click", function () {
     // diactive previous item
@@ -91,12 +68,12 @@ resumeListItems.forEach(resumeListItem => {
   });
 });
 
-/*--------------------- Swiper Sliders Configurations ---------------------*/
+/*---------------------  تب ها و عملکرد اسلایدرها ---------------------*/
 
 const swiper = new Swiper(".swiper", {
   // Basic Config
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 30,
 
   // pagination config
   pagination: {
@@ -109,23 +86,20 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      // spaceBetween: 20,
     },
 
     992: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      // spaceBetween: 30,
     },
 
     1200: {
       slidesPerView: 4,
-      spaceBetween: 50,
+      // spaceBetween: 50,
     },
   },
 });
-
-// Sliders Tabs list
-const sliderItems = document.querySelectorAll(".portfolio-list__item");
 
 sliderItems.forEach(sliderItem => {
   sliderItem.addEventListener("click", e => {
@@ -147,8 +121,25 @@ sliderItems.forEach(sliderItem => {
   });
 });
 
-// portfolio list slider
-const portfolioListSlider = new Swiper(".portfolio__list-slider", {
-  slidesPerView: "5",
-  spaceBetween: 30,
+/* ScrollSpy Feature */
+
+const sectionObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      const sectionClass = entry.target.className;
+      const menuItem = document.querySelector(`.menu__item[data-section="${sectionClass}"]`);
+      if (entry.isIntersecting) {
+        menuItem.classList.add("menu__item--active");
+      } else {
+        menuItem.classList.remove("menu__item--active");
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
+sections.forEach(section => {
+  sectionObserver.observe(section);
 });
