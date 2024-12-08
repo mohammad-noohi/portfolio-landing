@@ -1,6 +1,7 @@
 "use strict";
 
 /*----------------------- Elements -----------------------*/
+const html = document.documentElement;
 const hamburgerToggle = document.querySelector(".bars");
 const menu = document.querySelector(".menu");
 const overlay = document.querySelector(".overlay");
@@ -9,22 +10,23 @@ const resumeListItems = document.querySelectorAll(".resume__list-item");
 const tabElems = document.querySelectorAll(".tab");
 const menuItems = document.querySelectorAll(".menu__item");
 const sliderItems = document.querySelectorAll(".portfolio-list__item");
+const themeToggler = document.querySelector(".theme-toggler");
 
-/*-------------- باز و بسته شدن منو موبایل --------------*/
+/*-------------- Open and Close Mobile Menu --------------*/
 hamburgerToggle.addEventListener("click", function (e) {
   hamburgerToggle.classList.toggle("bars--open");
   menu.classList.toggle("menu--open");
   overlay.classList.toggle("overlay--active");
 });
 
-// بسته شدن منو موبایل با کلیک خارج از منو
+// slose mobile menu with overlay
 overlay.addEventListener("click", e => {
   hamburgerToggle.classList.remove("bars--open");
   menu.classList.remove("menu--open");
   overlay.classList.remove("overlay--active");
 });
 
-/*------------------- اسکرول به سکشن مورد نظر -------------------*/
+/*------------------- Scroll To Section Action -------------------*/
 menuItems.forEach(menuItem => {
   menuItem.addEventListener("click", e => {
     e.preventDefault();
@@ -52,7 +54,7 @@ menuItems.forEach(menuItem => {
   });
 });
 
-/*-------------- عملکرد تب های توی سکشن روزمه --------------*/
+/*-------------- Resume Section Tabs Logic --------------*/
 resumeListItems.forEach(resumeListItem => {
   resumeListItem.addEventListener("click", function () {
     // diactive previous item
@@ -68,7 +70,7 @@ resumeListItems.forEach(resumeListItem => {
   });
 });
 
-/*---------------------  تب ها و عملکرد اسلایدرها ---------------------*/
+/*--------------------- Portfolio Sliders Logic ---------------------*/
 
 const swiper = new Swiper(".swiper", {
   // Basic Config
@@ -121,7 +123,7 @@ sliderItems.forEach(sliderItem => {
   });
 });
 
-/* ScrollSpy Feature */
+/*------------------------- ScrollSpy Feature -------------------------*/
 
 const sectionObserver = new IntersectionObserver(
   entries => {
@@ -142,4 +144,25 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach(section => {
   sectionObserver.observe(section);
+});
+
+/*---------------------- Light and Dark Logic ----------------------*/
+
+// load last theme when page is loaded
+window.addEventListener("load", e => {
+  if (localStorage.getItem("theme") === "dark") {
+    themeToggler.classList.add("theme-toggler--dark");
+    html.classList.add("dark-theme");
+  }
+});
+
+themeToggler.addEventListener("click", e => {
+  themeToggler.classList.toggle("theme-toggler--dark");
+  html.classList.toggle("dark-theme");
+
+  if (html.classList.contains("dark-theme")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });

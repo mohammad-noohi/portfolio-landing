@@ -1,9 +1,3 @@
-/* 
-
-وقتی یه فایل سی اس اس رو ایمپورت میکنه خودکار میره و بالا قرار میگیره مثل هویستینگ توی جی اس کار میکنه برای همین حواست به این موضوع باشه و نمیتونیم مثلا بیایم و کدهای اصلی رو بنویسیم و بعدش فایل ریسپانسیو رو ایمپورت کنیم این کار اصولی نیست و یا باید برای کدهای اصلی یه فایل دیگه بسازیم و اونم ایمپورت کنیم و بعدش ریسپانسیو رو ایمپورت کنیم یا اینکه بعد از فایل اصلی فایل ریسپانسیو رو توی فایل اچ تی ام ال لینک بدهیم
-
-*/
-
 /* The order of import files is important */
 @import url("normalize.css");
 @import url("grid.css");
@@ -18,6 +12,31 @@
 
   --primary-color: #0abead;
   --secondary-color: #f57f17;
+}
+
+/* dark theme */
+:root.dark-theme {
+  --text-color: #95a5c6;
+  --app-bg-color: #161d26;
+  --section-bg-color: #1f2935;
+}
+
+:root.dark-theme .header,
+:root.dark-theme .hero__img,
+:root.dark-theme .about__wrapper,
+:root.dark-theme .resume,
+:root.dark-theme .pricing,
+:root.dark-theme .package,
+:root.dark-theme .resume__list {
+  box-shadow: none;
+}
+
+:root.dark-theme .hero {
+  background-image: url("../media/shapes/header-shape-dark.svg");
+}
+
+:root.dark-theme .tab__item-title {
+  color: var(--secondary-color);
 }
 
 /*------------- My Reset CSS -------------*/
@@ -58,11 +77,6 @@ a {
 
 .wrap-reverse {
   flex-wrap: wrap-reverse;
-}
-
-.container {
-  /* border-left: 1px solid red;
-  border-right: 1px solid red; */
 }
 
 .img-fluid {
@@ -203,7 +217,7 @@ a {
   cursor: pointer;
 }
 
-.menu__item--active  {
+.menu__item--active {
   color: var(--primary-color);
 }
 
@@ -216,7 +230,6 @@ a {
 .menu__link:hover {
   color: var(--primary-color);
 }
-
 
 .bars {
   display: none;
@@ -289,14 +302,11 @@ a {
 }
 
 /*----------------------------- Main -----------------------------*/
-.main {
-}
 
 /*-------- Hero Section --------*/
 
 .hero {
   padding: 8rem 0 30rem 0;
-  /* scroll-margin-top: 10rem; */
   background-image: url("../media/shapes/header-shape.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -354,10 +364,7 @@ a {
 /*------------- About Us Section -------------*/
 
 .about {
-  /* padding-top: 4.5rem;
-  padding-bottom: 4.5rem; */
   margin-top: 8rem;
-  /* scroll-margin-top: 10rem; */ /* we can use this instead of large padding */
 }
 
 .about__wrapper {
@@ -407,7 +414,6 @@ a {
 }
 
 .about__list-item {
-  /* padding-left: 2.4rem; */
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -430,10 +436,7 @@ a {
 
 /* Services Section */
 .services {
-  /* padding-top: 4.5rem;
-  padding-bottom: 4.5rem; */
   margin-top: 8rem;
-  /* scroll-margin-top: 10rem; */
 }
 
 .service-card {
@@ -540,17 +543,16 @@ a {
 
 /*----------------- Resume Section -----------------*/
 .resume {
+  background-color: var(--section-bg-color);
   padding-top: 9rem;
   padding-bottom: 9rem;
   margin-top: 8rem;
-  /* scroll-margin-top: 10rem; */
   box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
   transform: skewY(-5deg);
 }
 
 .resume__container {
   display: flex;
-  /* align-items: center; */ /* same height of tab list and tabs */
   gap: 5rem;
 }
 
@@ -639,16 +641,6 @@ a {
   align-self: stretch;
 }
 
-.tab::before {
-  /* content: "";
-  display: block;
-  position: absolute;
-  width: 3px;
-  border-radius: 1rem;
-  height: 100%;
-  background-color: var(--primary-color); */
-}
-
 .tab {
   opacity: 0;
   visibility: hidden;
@@ -673,19 +665,6 @@ a {
 .tab__item {
   padding-left: 25px;
 }
-
-/* .tab__item::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  top: 0.6rem;
-  left: 0;
-  transform: translateX(-50%);
-} */
 
 .tab__item-header {
   display: flex;
@@ -744,7 +723,6 @@ a {
 /* portfolio Section */
 .portfolio {
   margin-top: 8rem;
-  /* scroll-margin-top: 10rem; */
 }
 
 .portfolio-list {
@@ -763,7 +741,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
+  background-color: var(--section-bg-color);
   cursor: pointer;
   transition: all 200ms ease;
 }
@@ -785,7 +763,6 @@ a {
   opacity: 1;
   visibility: visible;
   height: auto;
-  /* height: 40rem; */ /* if we write this code we see an animation for reveal slider */
 }
 
 .swiper {
@@ -826,10 +803,10 @@ pagination , navigation buttons has position absolute so be carefull
 
 /*----------------- Pricing Section -----------------*/
 .pricing {
+  background-color: var(--section-bg-color);
   padding-top: 9rem;
   margin-top: 8rem;
   padding-bottom: 15rem;
-  /* scroll-margin-top: 10rem; */
   box-shadow: 0 0 8.1rem 0 rgba(19, 182, 255, 0.24);
   transform: skewY(-5deg);
 }
@@ -1010,4 +987,39 @@ pagination , navigation buttons has position absolute so be carefull
 .footer__social-icon {
   width: 3rem;
   height: 3rem;
+}
+
+/* theme toggler  */
+.theme-toggler {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--app-bg-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+}
+
+.theme-toggler svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.theme-toggler .moon-icon {
+  display: none;
+}
+
+.theme-toggler.theme-toggler--dark .moon-icon {
+  display: block;
+}
+
+.theme-toggler.theme-toggler--dark .sun-icon {
+  display: none;
 }
