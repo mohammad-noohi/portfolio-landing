@@ -166,3 +166,6 @@ themeToggler.addEventListener("click", e => {
     localStorage.setItem("theme", "light");
   }
 });
+
+/*------------------- AOS library config -------------------*/
+AOS.init();

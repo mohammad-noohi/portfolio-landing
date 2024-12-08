@@ -8,8 +8,10 @@
     <link rel="icon" type="image/x-icon" href="media/pictures/WA..png" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="styles/aos.css" />
     <!-- app.min.css -->
-     <link rel="stylesheet" href="styles/app.min.css">
+    <link rel="stylesheet" href="styles/app.min.css" />
   </head>
   <body>
     <header class="header header--scrolled">
@@ -43,7 +45,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-between wrap-reverse">
             <div class="col-12 col-lg-6 col-xl-7">
-              <div class="hero__content">
+              <div class="hero__content" data-aos="fade-right" data-aos-duration="2000">
                 <h3 class="hero__mini-title">Hello, IM <span class="username">White Alexa</span></h3>
                 <h2 class="hero__title">Creative Designer</h2>
                 <p class="hero__caption">Freelancer Web/ Mobile UI/UX Designer with Motion Graphics</p>
@@ -54,13 +56,13 @@
               </div>
             </div>
             <div class="col-12 col-lg-6 col-xl-5">
-              <div class="hero__img"></div>
+              <div class="hero__img" data-aos="fade-left" data-aos-duration="2000"></div>
             </div>
           </div>
         </div>
       </section>
       <!-- About Us Section -->
-      <section class="about">
+      <section class="about" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
           <h2 class="section-title">about us</h2>
           <p class="section-subtitle">why choose me ?</p>
@@ -91,7 +93,7 @@
         </div>
       </section>
       <!-- Services Section -->
-      <section class="services">
+      <section class="services" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
           <h2 class="section-title">services</h2>
           <p class="section-subtitle">What We Provide You ?</p>
@@ -100,7 +102,7 @@
           <!-- Services Cards -->
           <div class="row">
             <div class="col-12 col-md-6 col-xl-4">
-              <div class="service-card service-card--purple">
+              <div class="service-card service-card--purple" data-aos="flip-left" data-aos-duration="400">
                 <div class="service-card__content">
                   <div class="service-card__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="69.016" height="64.973" viewBox="0 0 69.016 64.973">
@@ -122,7 +124,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-xl-4">
-              <div class="service-card service-card--yellow">
+              <div class="service-card service-card--yellow" data-aos="flip-left" data-aos-duration="400" data-aos-delay="200">
                 <div class="service-card__content">
                   <div class="service-card__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="72.005" height="65" viewBox="0 0 72.005 65">
@@ -144,7 +146,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-xl-4">
-              <div class="service-card service-card--pink">
+              <div class="service-card service-card--pink" data-aos="flip-left" data-aos-duration="400" data-aos-delay="400">
                 <div class="service-card__content">
                   <div class="service-card__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="78.997" height="65" viewBox="0 0 78.997 65">
@@ -166,7 +168,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-xl-4">
-              <div class="service-card service-card--orange">
+              <div class="service-card service-card--orange" data-aos="flip-left" data-aos-duration="400">
                 <div class="service-card__content">
                   <div class="service-card__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="72.977" height="64.991" viewBox="0 0 72.977 64.991">
@@ -184,7 +186,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-xl-4">
-              <div class="service-card service-card--blue">
+              <div class="service-card service-card--blue" data-aos="flip-left" data-aos-duration="400" data-aos-delay="200">
                 <div class="service-card__content">
                   <div class="service-card__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64.99" height="64.99" viewBox="0 0 64.99 64.99">
@@ -206,7 +208,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-xl-4">
-              <div class="service-card service-card--green">
+              <div class="service-card service-card--green" data-aos="flip-left" data-aos-duration="400" data-aos-delay="400">
                 <div class="service-card__content">
                   <div class="service-card__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64.999" height="65" viewBox="0 0 64.999 65">
@@ -536,7 +538,7 @@
         </div>
       </section>
       <!-- Portfolio Section -->
-      <section class="portfolio">
+      <section class="portfolio" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
           <h2 class="section-title">portfolio</h2>
           <p class="section-subtitle">Check in Our Latest Works</p>
@@ -745,7 +747,7 @@
 
           <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="package bg-orange">
+              <div class="package bg-orange" data-aos="fade-up" data-aos-duration="2000">
                 <div class="package__header">
                   <h4 class="package__title">Basic</h4>
                   <span class="package__price">$70</span>
@@ -795,7 +797,7 @@
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="package bg-purple">
+              <div class="package bg-purple" data-aos="fade-up" data-aos-duration="2000">
                 <div class="package__header">
                   <h4 class="package__title">Standard</h4>
                   <span class="package__price">$100</span>
@@ -845,7 +847,7 @@
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="package bg-pink">
+              <div class="package bg-pink" data-aos="fade-up" data-aos-duration="2000">
                 <div class="package__header">
                   <h4 class="package__title">Premium</h4>
                   <span class="package__price">$150</span>
@@ -898,7 +900,7 @@
         </div>
       </section>
       <!-- Contactus Section -->
-      <section class="contactus">
+      <section class="contactus" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="section-title">contact us</h2>
         <p class="section-subtitle">let's keep in touch</p>
         <div class="section-line"></div>
@@ -995,6 +997,8 @@
 
     <!-- Swiper Js -->
     <script src="scripts/swiper-bundle.min.js"></script>
+    <!-- AOS Js -->
+    <script src="scripts/aos.js"></script>
     <!-- app.js -->
     <script src="scripts/app.js"></script>
   </body>
