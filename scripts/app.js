@@ -125,22 +125,14 @@ sliderItems.forEach(sliderItem => {
 
 /*------------------------- ScrollSpy Feature -------------------------*/
 
-const sectionObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      const sectionClass = entry.target.className;
-      const menuItem = document.querySelector(`.menu__item[data-section="${sectionClass}"]`);
-      if (entry.isIntersecting) {
-        menuItem.classList.add("menu__item--active");
-      } else {
-        menuItem.classList.remove("menu__item--active");
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.querySelector(".menu__item--active").classList.remove("menu__item--active");
+      document.querySelector(`.menu__item[data-section="${entry.target.id}"]`).classList.add("menu__item--active");
+    }
+  });
+});
 
 sections.forEach(section => {
   sectionObserver.observe(section);
